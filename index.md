@@ -152,7 +152,7 @@ body {
 <!-- Cayman 风格页面头部 -->
 <header class="page-header">
     <h1 class="project-name">Susie's Space</h1>
-    <h2 class="project-tagline">简约而不简单，细节中见品味</h2>
+    <h2 class="project-tagline">欢迎来到我的空间</h2>
 </header>
 
 <!-- 主内容区域 -->
