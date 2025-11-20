@@ -1,40 +1,23 @@
----
-layout: default
----
+## 欢迎来到我的主页
+
+### 关于我
+
+### 技能
+
+### 联系
+- GitHub: [Susie-Yaoyi](https://github.com/Susie-Yaoyi)
+- Email: Susie070106@qq.com
 
 <style>
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     color: white;
-    font-family: 'Arial', sans-serif;
 }
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-h1 {
-    color: #ffd700;
-    text-align: center;
-    font-size: 2.5em;
-}
-
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: block;
-    border: 4px solid white;
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 </style>
-
-<div class="container">
-    < img src="/assets/images/profile.jpg" alt="头像" class="profile-img" onerror="this.style.display='none'">
-    
-    <h1>👋 欢迎来到我的世界</h1>
-    
-    <p>我是 <strong>Susie</strong>，一名充满创意的开发者...</p >
-</div>
