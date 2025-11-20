@@ -8,139 +8,186 @@
 - GitHub: [Susie-Yaoyi](https://github.com/Susie-Yaoyi)
 - Email: Susie070106@qq.com
 
+---
+layout: default
+---
+
 <style>
 /* 基础样式 */
 body {
-    background: #fefefe;
-    color: #333;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f8f9fa;
     margin: 0;
-    padding: 20px;
-    min-height: 100vh;
+    padding: 0;
     position: relative;
     overflow-x: hidden;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* 光晕元素 */
+/* 简约光晕 - 非常 subtle */
 .glow {
     position: fixed;
     border-radius: 50%;
-    filter: blur(40px);
-    opacity: 0.6;
-    animation: float 15s infinite ease-in-out;
+    filter: blur(80px);
+    opacity: 0.3;  /* 很低的不透明度 */
+    animation: float 25s infinite ease-in-out;
     z-index: -1;
 }
 
-/* 粉色光晕 */
 .glow:nth-child(1) {
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 182, 193, 0.4); /* 浅粉色 */
-    top: 10%;
-    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgba(180, 220, 255, 0.2);  /* 非常淡的蓝色 */
+    top: 20%;
+    left: 10%;
     animation-delay: 0s;
 }
 
-/* 蓝色光晕 */
 .glow:nth-child(2) {
-    width: 400px;
-    height: 400px;
-    background: rgba(173, 216, 230, 0.3); /* 浅蓝色 */
-    bottom: 5%;
-    right: 10%;
-    animation-delay: -5s;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 200, 220, 0.15); /* 非常淡的粉色 */
+    bottom: 30%;
+    right: 15%;
+    animation-delay: -8s;
 }
 
-/* 薄荷绿光晕 */
 .glow:nth-child(3) {
-    width: 250px;
-    height: 250px;
-    background: rgba(152, 251, 152, 0.25); /* 浅绿色 */
-    top: 50%;
-    left: 70%;
-    animation-delay: -10s;
+    width: 180px;
+    height: 180px;
+    background: rgba(200, 255, 220, 0.1);  /* 几乎看不见的绿色 */
+    top: 60%;
+    left: 80%;
+    animation-delay: -15s;
 }
 
-/* 光晕浮动动画 */
+/* 非常缓慢的浮动 */
 @keyframes float {
-    0%, 100% {
-        transform: translate(0, 0) scale(1);
+    0%, 100% { 
+        transform: translate(0, 0) scale(1); 
     }
-    25% {
-        transform: translate(20px, 20px) scale(1.1);
+    25% { 
+        transform: translate(10px, 15px) scale(1.02); 
     }
-    50% {
-        transform: translate(-15px, 15px) scale(0.9);
+    50% { 
+        transform: translate(-8px, 10px) scale(0.98); 
     }
-    75% {
-        transform: translate(10px, -10px) scale(1.05);
+    75% { 
+        transform: translate(5px, -8px) scale(1.01); 
     }
 }
 
-/* 内容容器 */
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 40px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* 标题样式 */
-.header {
+/* Cayman 风格页面头部 */
+.page-header {
+    color: #fff;
     text-align: center;
-    margin-bottom: 40px;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+    padding: 5rem 6rem;
+    position: relative;
 }
 
-.name {
-    font-size: 2.5em;
-    color: #5d8aa8;
-    margin-bottom: 10px;
+.project-name {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+    font-size: 3.25rem;
     font-weight: 300;
 }
 
-.tagline {
-    font-size: 1.2em;
-    color: #7f8c8d;
-    font-style: italic;
+.project-tagline {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    opacity: 0.9;
+    font-size: 1.5rem;
 }
 
-/* 卡片样式 */
+/* 主内容区域 */
+.main-content {
+    max-width: 64rem;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.95); /* 更实心的背景 */
+}
+
+@media screen and (max-width: 42em) {
+    .page-header {
+        padding: 3rem 1rem;
+    }
+    .project-name {
+        font-size: 2.25rem;
+    }
+    .project-tagline {
+        font-size: 1.2rem;
+    }
+    .main-content {
+        padding: 2rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* 简约卡片 */
 .card {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 15px;
-    border-left: 4px solid #a8d8ea;
-    transition: transform 0.3s ease;
+    background: white;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-left: 3px solid #159957;
+    transition: all 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* 技能标签 */
+/* 简约技能标签 */
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .skill-tag {
-    background: linear-gradient(135deg, #a8d8ea, #cce7ff);
-    color: #2c3e50;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: #f8f9fa;
+    color: #159957;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    border: 1px solid #e9ecef;
 }
 </style>
 
-<!-- 光晕背景 -->
+<!-- 简约光晕背景 -->
 <div class="glow"></div>
 <div class="glow"></div>
 <div class="glow"></div>
+
+<!-- Cayman 风格页面头部 -->
+<header class="page-header">
+    <h1 class="project-name">Susie's Space</h1>
+    <h2 class="project-tagline">简约而不简单，细节中见品味</h2>
+</header>
+
+<!-- 主内容区域 -->
+<main class="main-content">
+    <div class="card">
+        <h2>💫 关于我</h2>
+        <p>（没想好啦）</p >
+    </div>
+    
+    <div class="card">
+        <h2>🛠️ 技能</h2>
+        <div class="skills">
+            <span class="skill-tag">（）</span>
+            <span class="skill-tag">（）</span>
+            <span class="skill-tag">（）</span>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>📬 联系</h2>
+        <p>📧 Susie070106@qq.com<br>
+           💼 GitHub: @Susie-Yaoyi</p >
+    </div>
+</main>
