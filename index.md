@@ -10,14 +10,30 @@
 
 <style>
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    color: white;
+    background: #fafafa;
+    position: relative;
 }
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+
+.glow {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(173,216,230,0.3) 0%, transparent 70%);
+    animation: move 20s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+.glow:nth-child(2) {
+    background: radial-gradient(circle, rgba(255,182,193,0.2) 0%, transparent 70%);
+    animation-delay: -10s;
+}
+
+@keyframes move {
+    0% { transform: translate(10vw, 10vh); }
+    100% { transform: translate(80vw, 80vh); }
 }
 </style>
+
+<div class="glow"></div>
+<div class="glow"></div>
