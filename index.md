@@ -1,7 +1,7 @@
 <style>
 /* 基础样式 */
 body {
-    background: #f8f9fa;
+    background: #fafbfc;
     margin: 0;
     padding: 0;
     position: relative;
@@ -9,56 +9,54 @@ body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* 简约光晕 - 非常 subtle */
+/* 适度的光晕效果 */
 .glow {
     position: fixed;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.3;  /* 很低的不透明度 */
-    animation: float 25s infinite ease-in-out;
+    filter: blur(70px);
+    opacity: 0.4;  /* 适中的不透明度 */
+    animation: float 20s infinite ease-in-out;
     z-index: -1;
+    pointer-events: none;
 }
 
 .glow:nth-child(1) {
-    width: 200px;
-    height: 200px;
-    background: rgba(180, 220, 255, 0.2);  /* 非常淡的蓝色 */
-    top: 20%;
-    left: 10%;
+    width: 250px;
+    height: 250px;
+    background: rgba(180, 220, 255, 0.3);  /* 柔和的蓝色 */
+    top: 15%;
+    left: 8%;
     animation-delay: 0s;
 }
 
 .glow:nth-child(2) {
-    width: 150px;
-    height: 150px;
-    background: rgba(255, 200, 220, 0.15); /* 非常淡的粉色 */
-    bottom: 30%;
-    right: 15%;
-    animation-delay: -8s;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 200, 220, 0.25); /* 柔和的粉色 */
+    bottom: 25%;
+    right: 12%;
+    animation-delay: -7s;
 }
 
 .glow:nth-child(3) {
-    width: 180px;
-    height: 180px;
-    background: rgba(200, 255, 220, 0.1);  /* 几乎看不见的绿色 */
-    top: 60%;
-    left: 80%;
-    animation-delay: -15s;
+    width: 220px;
+    height: 220px;
+    background: rgba(200, 255, 220, 0.2);  /* 柔和的绿色 */
+    top: 55%;
+    left: 75%;
+    animation-delay: -12s;
 }
 
-/* 非常缓慢的浮动 */
+/* 流畅的浮动动画 */
 @keyframes float {
     0%, 100% { 
         transform: translate(0, 0) scale(1); 
     }
-    25% { 
-        transform: translate(10px, 15px) scale(1.02); 
+    33% { 
+        transform: translate(15px, 20px) scale(1.05); 
     }
-    50% { 
-        transform: translate(-8px, 10px) scale(0.98); 
-    }
-    75% { 
-        transform: translate(5px, -8px) scale(1.01); 
+    66% { 
+        transform: translate(-10px, 15px) scale(0.95); 
     }
 }
 
@@ -86,13 +84,14 @@ body {
     font-size: 1.5rem;
 }
 
-/* 主内容区域 */
+/* 主内容区域 - 稍微透明一些让光晕透出来 */
 .main-content {
     max-width: 64rem;
     padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
-    background: rgba(255, 255, 255, 0.95); /* 更实心的背景 */
+    background: rgba(255, 255, 255, 0.92); /* 稍微透明 */
+    backdrop-filter: blur(5px);
 }
 
 @media screen and (max-width: 42em) {
@@ -111,22 +110,15 @@ body {
     }
 }
 
-/* 简约卡片 */
 .card {
     background: white;
     padding: 1.5rem;
     margin: 1.5rem 0;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
     border-left: 3px solid #159957;
-    transition: all 0.2s ease;
 }
 
-.card:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* 简约技能标签 */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -144,7 +136,7 @@ body {
 }
 </style>
 
-<!-- 简约光晕背景 -->
+<!-- 光晕背景 -->
 <div class="glow"></div>
 <div class="glow"></div>
 <div class="glow"></div>
