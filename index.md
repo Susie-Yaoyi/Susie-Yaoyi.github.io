@@ -1,17 +1,3 @@
-## Susie的主页
-
-### 关于我
-
-### 技能
-
-### 联系
-- GitHub: [Susie-Yaoyi](https://github.com/Susie-Yaoyi)
-- Email: Susie070106@qq.com
-
----
-layout: default
----
-
 <style>
 /* 基础样式 */
 body {
