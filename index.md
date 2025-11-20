@@ -139,9 +139,9 @@ body {
     <div class="card">
         <h2>🛠️ 技能</h2>
         <div class="skills">
-            <span class="skill-tag">HTML/CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">设计</span>
+            <span class="skill-tag">1</span>
+            <span class="skill-tag">2</span>
+            <span class="skill-tag">3</span>
         </div>
     </div>
     
