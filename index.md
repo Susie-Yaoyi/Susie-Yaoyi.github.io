@@ -9,12 +9,12 @@ body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* 适度的光晕效果 */
+/* 光晕效果 */
 .glow {
     position: fixed;
     border-radius: 50%;
     filter: blur(70px);
-    opacity: 0.4;  /* 适中的不透明度 */
+    opacity: 0.4;
     animation: float 20s infinite ease-in-out;
     z-index: -1;
     pointer-events: none;
@@ -23,7 +23,7 @@ body {
 .glow:nth-child(1) {
     width: 250px;
     height: 250px;
-    background: rgba(180, 220, 255, 0.3);  /* 柔和的蓝色 */
+    background: rgba(180, 220, 255, 0.3);
     top: 15%;
     left: 8%;
     animation-delay: 0s;
@@ -32,7 +32,7 @@ body {
 .glow:nth-child(2) {
     width: 200px;
     height: 200px;
-    background: rgba(255, 200, 220, 0.25); /* 柔和的粉色 */
+    background: rgba(255, 200, 220, 0.25);
     bottom: 25%;
     right: 12%;
     animation-delay: -7s;
@@ -41,13 +41,13 @@ body {
 .glow:nth-child(3) {
     width: 220px;
     height: 220px;
-    background: rgba(200, 255, 220, 0.2);  /* 柔和的绿色 */
+    background: rgba(200, 255, 220, 0.2);
     top: 55%;
     left: 75%;
     animation-delay: -12s;
 }
 
-/* 流畅的浮动动画 */
+/* 浮动动画 */
 @keyframes float {
     0%, 100% { 
         transform: translate(0, 0) scale(1); 
@@ -60,14 +60,13 @@ body {
     }
 }
 
-/* Cayman 风格页面头部 */
+/* 页面头部 */
 .page-header {
     color: #fff;
     text-align: center;
     background-color: #159957;
     background-image: linear-gradient(120deg, #155799, #159957);
     padding: 5rem 6rem;
-    position: relative;
 }
 
 .project-name {
@@ -84,30 +83,13 @@ body {
     font-size: 1.5rem;
 }
 
-/* 主内容区域 - 稍微透明一些让光晕透出来 */
+/* 主内容区域 */
 .main-content {
     max-width: 64rem;
     padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
-    background: rgba(255, 255, 255, 0.92); /* 稍微透明 */
-    backdrop-filter: blur(5px);
-}
-
-@media screen and (max-width: 42em) {
-    .page-header {
-        padding: 3rem 1rem;
-    }
-    .project-name {
-        font-size: 2.25rem;
-    }
-    .project-tagline {
-        font-size: 1.2rem;
-    }
-    .main-content {
-        padding: 2rem 1rem;
-        font-size: 1rem;
-    }
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .card {
@@ -141,7 +123,7 @@ body {
 <div class="glow"></div>
 <div class="glow"></div>
 
-<!-- Cayman 风格页面头部 -->
+<!-- 页面头部 -->
 <header class="page-header">
     <h1 class="project-name">Susie's Space</h1>
     <h2 class="project-tagline">欢迎来到我的空间</h2>
@@ -157,9 +139,9 @@ body {
     <div class="card">
         <h2>🛠️ 技能</h2>
         <div class="skills">
-            <span class="skill-tag">（）</span>
-            <span class="skill-tag">（）</span>
-            <span class="skill-tag">（）</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">设计</span>
         </div>
     </div>
     
